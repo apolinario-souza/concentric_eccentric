@@ -1,9 +1,7 @@
 # Data and analysis code: load and contraction type in a fast elbow flexion timing task
 
-> **TODO (remove before publishing):** add the article reference/DOI, the authors, and the DOI of
-> the equipment repository release (see "Equipment" below). Items marked TODO need checking.
 
-Raw data and analysis code for the article [TODO: title, journal, DOI].
+Raw data and analysis code for the article [title, journal, DOI].
 
 Participants (n = 45) performed fast elbow flexion movements on a Scott (preacher) bench,
 in concentric (`con`) and eccentric (`exc`) actions, with three loads (planned at 37, 65 and
@@ -13,7 +11,7 @@ a 60° amplitude [TODO: confirm amplitude] and a target movement time of 250 ms.
 ## Equipment
 
 The data were collected with the elbow goniometer, Arduino code and LabVIEW program available at
-[TODO: link and DOI of the equipment repository, release used in this study, `v6.vi`].
+https://github.com/apolinario-souza/variability-con-exc.
 
 ## Contents
 
@@ -65,20 +63,12 @@ imperative stimulus occurs at frame 800 (4000 ms) and the trace ends ~1500 ms af
 | 4 | Elbow angle (°) |
 | 5 | Angular velocity (°/s) |
 
-The first column of each line is empty (the line starts with a tab) and the velocity is
-missing in the last row. In concentric trials the angle decreases (≈136° → 77°) and the
-velocity is negative; in eccentric trials the angle increases (≈79° → 139°).
-
-> **TODO:** confirm the velocity scale. With 5 ms per frame, the derivative of column 4 peaks
-> at about twice the peak of column 5. Either the angle or the velocity column is off by a
-> factor of 2; check the goniometer calibration and the velocity computation in `v6.vi`.
 
 ### Summary files (`<condition>.txt`)
 
 Generated online by the LabVIEW program: tab-separated, no header, comma as decimal separator,
 one line per trial. Columns: reaction time (ms), movement time (ms), absolute error (°),
-constant error (°), peak velocity (°/s). These values use movement onset and end at **20%** of
-peak velocity (the criterion used for the online feedback); the analysis recomputes everything
+constant error (°), peak velocity (°/s). the analysis recomputes everything
 from the traces at **5%** (see below). `dados_5pct.xlsx`, sheet `conferencia`, shows the
 agreement between the two.
 
